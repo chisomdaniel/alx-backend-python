@@ -22,4 +22,4 @@ class TestGithubOrgClient(unittest.TestCase):
         url = "https://api.github.com/orgs/{}".format(org_name)
         GithubOrgClient(org_name).org
 
-        #mock_func.assert_called_once_with(url)
+        # mock_func.assert_called_once_with(url)
