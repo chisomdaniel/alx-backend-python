@@ -9,6 +9,7 @@ from utils import get_json
 
 
 class TestGithubOrgClient(unittest.TestCase):
+    '''test class'''
 
     @parameterized.expand([
         ("google", {"key", "value"}),
@@ -16,6 +17,7 @@ class TestGithubOrgClient(unittest.TestCase):
     ])
     @patch("utils.get_json")
     def test_org(self, org_name, expected, mock_func):
+        '''test function'''
         mock_func.return_value = expected
         url = "https://api.github.com/orgs/{}".format(org_name)
         GithubOrgClient(org_name).org
